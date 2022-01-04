@@ -1,0 +1,25 @@
+ul.list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    li {
+        background-color: #F9F8F9;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 10px;
+        border: 1px solid #bec2cb;
+        a{
+            text-decoration: none;
+            color: #696969;
+        }
+    }
+    li:hover {
+        background-image: radial-gradient(#cfebfd, #e7f5fe, #f3faff);
+    }
+}
