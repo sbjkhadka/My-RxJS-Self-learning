@@ -11,6 +11,10 @@ export class ApiTestingService {
   getTestPOSTData() {
     return this.http.get<any>(`https://jsonplaceholder.typicode.com/posts`);
   }
+
+  getUserData() {
+    return this.http.get<any>(`https://jsonplaceholder.typicode.com/users`);
+  }
 }
 
 
