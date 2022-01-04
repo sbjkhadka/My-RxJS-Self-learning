@@ -20,6 +20,7 @@ import { PluckComponent } from './observable/pluck/pluck.component';
 import { FilterComponent } from './observable/filter/filter.component';
 import { TapComponent } from './observable/tap/tap.component';
 import { TakeComponent } from './observable/take/take.component';
+import { RetryComponent } from './observable/retry/retry.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { TakeComponent } from './observable/take/take.component';
     PluckComponent,
     FilterComponent,
     TapComponent,
-    TakeComponent
+    TakeComponent,
+    RetryComponent
   ],
   imports: [
     BrowserModule,
