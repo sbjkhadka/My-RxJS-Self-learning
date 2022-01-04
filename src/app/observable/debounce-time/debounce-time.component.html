@@ -1,0 +1,46 @@
+<div class="my-3">
+    <h2>DebounceTime & DistinctUntilChanged</h2>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <strong>Ex-01 <span class="text-primary">debounceTime</span></strong>
+            <hr>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label col-form-label-lg">
+                    Search..
+                </label>
+                <div class="col-sm-10 pl-5 pr-0">
+                    <input type="text"
+                    class="form-control form-control-lg" 
+                    placeholder="Search..."
+                    #searchInput>
+                </div>
+            </div>
+            <div class="progress" *ngIf="searching">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+            </div>
+            <span *ngIf="requestedData">Requested Data: <strong class="text-success">{{requestedData}}</strong></span>
+        </div>
+
+        <div class="col-md-6">
+            <strong>Ex-02 <span class="text-warning">distinctUntilChanged</span></strong>
+            <hr>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label col-form-label-lg">
+                    Search..
+                </label>
+                <div class="col-sm-10 pl-5 pr-0">
+                    <input type="text"
+                    class="form-control form-control-lg" 
+                    placeholder="Search..."
+                    #searchInput2>
+                </div>
+            </div>
+            <div class="progress" *ngIf="searching2">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+            </div>
+            <span *ngIf="requestedData2">Requested Data: <strong class="text-success">{{requestedData2}}</strong></span>
+        </div>
+
+    </div>
+</div>
