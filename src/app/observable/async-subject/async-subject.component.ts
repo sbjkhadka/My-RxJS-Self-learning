@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DesignUtilityService } from 'src/app/services/design-utility.service';
 
 @Component({
   selector: 'app-async-subject',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AsyncSubjectComponent implements OnInit {
 
-  constructor() { }
+  asyncVideoEmit;
+  constructor(private designUtilityService: DesignUtilityService) { }
 
   ngOnInit(): void {
+    this.designUtilityService.asyncVideoEmit.subscribe(res => {
+      this.asyncVideoEmit = res;
+    });
+  }
+
+  onVideoAdd(video) {
+    this.designUtilityService.asyncVideoEmit.next(video);
+  }
+
+  onComplete() {
+    this.designUtilityService.asyncVideoEmit.complete();
   }
 
 }
