@@ -21,6 +21,9 @@ import { ReplaySubjectComponent } from './observable/replay-subject/replay-subje
 import { AsyncSubjectComponent } from './observable/async-subject/async-subject.component';
 import { ConcatComponent } from './observable/concat/concat.component';
 import { MergeComponent } from './observable/merge/merge.component';
+import { MergemapComponent } from './observable/mergemap/mergemap.component';
+import { ConcatMapComponent } from './observable/concat-map/concat-map.component';
+import { ZipForkjoinComponent } from './observable/zip-forkjoin/zip-forkjoin.component';
 
 
 const routes: Routes = [
@@ -45,6 +48,9 @@ const routes: Routes = [
     { path: 'async-subject', component: AsyncSubjectComponent },
     { path: 'concat', component: ConcatComponent },
     { path: 'merge', component: MergeComponent },
+    { path: 'mergemap', component: MergemapComponent },
+    { path: 'concatmap', component: ConcatMapComponent },
+    { path: 'zip-forkjoin', component: ZipForkjoinComponent },
   ]},
   { path: '**', redirectTo: 'observable' },
 
